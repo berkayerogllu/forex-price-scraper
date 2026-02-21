@@ -11,9 +11,9 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "${DB_PORT}:5433"
+      - "5435:5432"
     volumes:
-      - price_scraper_data:/var/lib/postgresql/data
+      - price_scraper_data:/var/lib/postgresql  
 
 volumes:
   price_scraper_data:
